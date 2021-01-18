@@ -1,0 +1,79 @@
+---
+title: "Introduction"
+output: html_document
+author: "Your Name"
+date: "1-21-2020"
+editor_options: 
+  chunk_output_type: console
+---
+
+# Main Ideas
+
+- R is a statistical programming language
+- RStudio is a convenient interface we use to interact with R
+- R Markdown allows use to create reproducible reports integrating code, text, 
+and visualizations in a single document
+- GitHub is an effective platform we will use for collaboration and version 
+control
+
+# Coming Up
+
+- Lab on 1-22
+- Complete introductory survey if you haven't already
+- Ask questions!
+
+## Lecture Notes and Exercises
+
+First load the `tidyverse` package. A package is just a bunch of shareable code.
+
+```{r message = FALSE}
+library(tidyverse)
+```
+
+Follow the steps outlined in the slides to change "Your Name" in the header 
+above to your actual name. Then, click the black arrow next to the "Knit" 
+button and click "Knit to PDF".
+
+If you are satisfied with these changes, stage, commit, and push them following
+the steps in the slides.
+
+Add a basic computation to the code chunk below (something like `2+2`). Run the
+code chunk by clicking the green arrow on the right side code chunk. What do you notice?
+
+```{r first-code-chunk}
+```
+
+## Practice
+
+(1) Click the green arrow to run the code chunk below. You should see a 
+visualization of highway miles per gallon versus displacement for 234 cars, with
+points colored by the type of drive train (f = front-wheel drive, r = rear 
+wheel drive, 4 = 4wd).
+
+
+```{r first-visual}
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) + 
+  geom_point()
+```
+
+**Question:** How would you describe the relationship between type of drive 
+train, displacement, and highway miles per gallon?
+
+(2) Create new code in the code chunk below to create a scatterplot of highway miles
+per galoon versus displacement with points colored by class (just replace `drv`
+with `class`).
+
+```{r second-visual}
+```
+
+**Question:** How would you describe the relationship between type of drive 
+train, displacement, and highway miles per gallon?
+
+When you are satisfied with your visualizations and answers, knit the document, 
+then stage, commit, and push your changes.
+
+### Additional Resources
+
+- https://raw.githubusercontent.com/rstudio/cheatsheets/master/rmarkdown-2.0.pdf
+- https://www.tidyverse.org/
+- https://happygitwithr.com/
